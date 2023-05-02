@@ -13,13 +13,13 @@
 ## Installation 
 
 ```bash 
-    git clone https://github.com/mustafakaracuha/react-fitness-app.git
+    git clone https://github.com/mustafakaracuha/react-fitness-app-demo.git
 ```
 ```bash 
-    cd react-fitness-app
+    cd react-fitness-app-demo
 ```
 ```bash 
-    npm install react-fitness-app
+    npm install react-fitness-app-demo
 ```
 ```bash 
     npm run dev
