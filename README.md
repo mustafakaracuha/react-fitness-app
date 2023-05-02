@@ -33,6 +33,6 @@ https://react-fitness-app-demo.vercel.app/
   
 ### Screenshot
 
-<img align="center" width="900" width="900"  src="https://github.com/mustafakaracuha/react-fitness-app-demo/blob/main/src/assets/screenshot/app.gif" alt="muskaracuha" />
+<img align="center" width="900" width="900" style="border-radius:20px"  src="https://github.com/mustafakaracuha/react-fitness-app-demo/blob/main/src/assets/screenshot/app.gif" alt="muskaracuha" />
 
   
