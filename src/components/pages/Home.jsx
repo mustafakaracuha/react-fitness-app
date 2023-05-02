@@ -54,11 +54,11 @@ function Home() {
               5000,
             ]}
             speed={50}
-            style={{ fontSize: "80px" }}
+            className="xl: text-[80px] md:text-[80px] lg:text-[80px] max-sm:text-[65px] "
             repeat={Infinity}
           />
-          <h1 className="text-[80px]">And Free Sell!</h1>
-          <p className="text-xl mt-3">
+          <h1 className="xl: text-[85px] md:text-[80px] lg:text-[75px] max-sm:text-[65px]">And Free Sell!</h1>
+          <p className="text-xl mt-4">
             A healthy lifestyle should be an important part of everyone's life,
             and fitness is an important aspect of maintaining this lifestyle.
             This site provides a resource that covers the latest trends in
@@ -77,7 +77,7 @@ function Home() {
             one place.
           </p>
           <div className="w-full grid xl:grid-cols-4 sm:grid-cols-2 gap-x-2 mt-10">
-            <button className="group/item col-span-2 border-2 border-gray-300 h-14 rounded-full transition-all duration-500 text-black hover:bg-black hover:text-white flex items-center ">
+            <button className="group/item col-span-2 border-2 border-gray-300 h-14 rounded-full transition-all duration-500 text-black hover:bg-black hover:text-white flex items-center max-sm:justify-center">
               <Avatar src={user?.photoURL?.replace('"', "")} className="ml-2" />
               <p className="w-64 ml-3 text-md capitalize truncate">
                 Welcome Back {user?.displayName ? user?.displayName : user?.email }
@@ -96,7 +96,7 @@ function Home() {
             </button>
             <button
               onClick={handleLogout}
-              className="xl:col-span-1 md:col-span-2 lg:col-span-1 max-sm:mt-4 md:mt-4 lg:mt-0 xl:mt-0 max-sm:col-span-2 group/item col-span-1 border-2 border-gray-300 h-14 rounded-full transition-all duration-500 text-black hover:bg-black hover:text-white flex items-center justify-center"
+              className="xl:col-span-1 md:col-span-2 lg:col-span-1 max-sm:mt-4 max-sm:mb-5 md:mt-4 lg:mt-0 xl:mt-0 max-sm:col-span-2 group/item col-span-1 border-2 border-gray-300 h-14 rounded-full transition-all duration-500 text-black hover:bg-black hover:text-white flex items-center justify-center"
             >
               <p className="text-md capitalize">Quit</p>
               <FiLogOut
