@@ -237,7 +237,7 @@ function Signup() {
             </span>
             Continue with Github
           </button>
-          <p className=" text-center text-sm 2xl:text-slate-500 xl:text-slate-500 md:text-slate-500 sm:text-black text-slate-500 mt-10">
+          <p className=" text-center text-sm 2xl:text-slate-500 xl:text-slate-500 md:text-slate-500 sm:text-black text-slate-500 mt-6">
             Do you have an account?{" "}
             <NavLink to="/" className="font-bold">
               Sign in
@@ -249,7 +249,6 @@ function Signup() {
         <video
           className="w-full h-full object-cover opacity-50 max-sm:hidden"
           src={video1}
-          autoPlay
           loop
           muted
         />

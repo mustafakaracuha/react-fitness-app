@@ -227,7 +227,7 @@ function Signup() {
             </span>
             Continue with Github
           </button>
-          <p className=" text-center text-sm 2xl:text-slate-500 xl:text-slate-500 md:text-slate-500 sm:text-black text-slate-500 mt-10">
+          <p className=" text-center text-sm 2xl:text-slate-500 xl:text-slate-500 md:text-slate-500 sm:text-black text-slate-500 mt-6">
             Don't have an account?{" "}
             <NavLink to="/register" className="font-bold">
               Sign up
