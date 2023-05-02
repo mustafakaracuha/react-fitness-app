@@ -28,7 +28,7 @@
 
     
 ## Live
-https://new-year-note-app.vercel.app/
+https://react-fitness-app-demo.vercel.app/
 
   
 ### Screenshot
