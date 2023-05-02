@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import {
-  createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  TwitterAuthProvider,
-  signInWithPopup,
-  GithubAuthProvider,
-} from "firebase/auth";
-import { auth } from "../../config/firebase";
-
 import video1 from "../../assets/video/video1.mp4";
 import google from "../../assets/images/logo/google.png";
 import github from "../../assets/images/logo/github.png";
@@ -18,6 +9,9 @@ import logo from "../../assets/images/logo/logo.png";
 
 import { CgSpinnerAlt } from "react-icons/cg";
 import { AiFillEyeInvisible,AiFillEye } from "react-icons/ai";
+
+import { createUser, googleLogin, twitterLogin, githubLogin } from "../../config/auth";
+
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -40,106 +34,22 @@ function Signup() {
 
   const validateInp = () => {return (email.length && password === confirmPassword && password.length && confirmPassword.length)};
 
-  const handleGithubLogin = async () => {
-    const provider = new GithubAuthProvider();
-    setLoading(true);
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      navigate("/home");
-      localStorage.setItem("user", JSON.stringify(user));
-      setTimeout(() => {
-        setLoading(false);
-        setErr("");
-      }, 2000);
-    } catch (error) {
-      const errorCode = error.code;
-      setErr(
-        errorCode === "auth/popup-closed-by-user"
-          ? "Popup closed by user"
-          : "" || errorCode === "auth/account-exists-with-different-credential"
-          ? "Account exists with different credential"
-          : ""
-      );
-      setLoading(false);
-    }
+  const handleCreateUser = async (e) => {
+    createUser(setLoading,setErr,email,password,navigate)
   };
 
   const handleGoogleLogin = async () => {
-    const provider = new GoogleAuthProvider();
-    setLoading(true);
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      localStorage.setItem("user", JSON.stringify(user));
-      navigate("/home");
-      setTimeout(() => {
-        setLoading(false);
-        setErr("");
-      }, 2000);
-    } catch (error) {
-      const errorCode = error.code;
-      setErr(
-        errorCode === "auth/popup-closed-by-user"
-          ? "Popup closed by user"
-          : "" || errorCode === "auth/account-exists-with-different-credential"
-          ? "Account exists with different credential"
-          : ""
-      );
-      setLoading(false);
-    }
+  googleLogin(setLoading,setErr,navigate)
   };
 
   const handleTwitterLogin = async () => {
-    const provider = new TwitterAuthProvider();
-    setLoading(true);
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      localStorage.setItem("user", JSON.stringify(user));
-      navigate("/home");
-      setTimeout(() => {
-        setLoading(false);
-        setErr("");
-      }, 2000);
-    } catch (error) {
-      const errorCode = error.code;
-      setErr(
-        errorCode === "auth/popup-closed-by-user"
-          ? "Popup closed by user"
-          : "" || errorCode === "auth/account-exists-with-different-credential"
-          ? "Account exists with different credential"
-          : ""
-      );
-      setLoading(false);
-    }
-  };
+    twitterLogin(setLoading,setErr,navigate)
+   };
 
-  const handleCreateUser = async (e) => {
-    setLoading(true);
-    try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
-      const user = userCredential.user;
-      console.log(user);
-      setTimeout(() => {
-        setLoading(false);
-        setErr("Registration Successfull");
-      }, 2000);
-       navigate("/")
-    } catch (error) {
-      const errorCode = error.code;
-      setErr(
-        errorCode === "auth/email-already-in-use"
-          ? "Email already exists"
-          : errorCode
-      );
-      setLoading(false);
-    }
+  const handleGithubLogin = async () => {
+  githubLogin(setLoading,setErr,navigate)
   };
+ 
 
   return (
     <div className="grid xl:grid-cols-3 md:grid-cols-1 max-sm:grid-cols-1">
