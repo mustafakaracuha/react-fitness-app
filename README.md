@@ -1,5 +1,5 @@
 
-# Fitness App
+# Fitness App Demo
 
 
 ## Technologies and Libraries
