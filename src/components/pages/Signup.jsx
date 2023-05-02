@@ -8,6 +8,7 @@ import twitter from "../../assets/images/logo/twitter.png";
 import logo from "../../assets/images/logo/logo.png";
 
 import { CgSpinnerAlt } from "react-icons/cg";
+import { FaCheckCircle,FaTimesCircle } from "react-icons/fa";
 import { AiFillEyeInvisible,AiFillEye } from "react-icons/ai";
 
 import { createUser, googleLogin, twitterLogin, githubLogin } from "../../config/auth";
@@ -79,10 +80,9 @@ function Signup() {
           />
            {
            isValidEmail ? 
-           <div className="w-4 h-4 bg-emerald-500 rounded-xl flex items-center justify-center transition-all absolute top-0 bottom-5 right-6 m-auto">
-          </div>:
-            <div className="w-4 h-4 bg-rose-400 rounded-full flex items-center justify-center transition-all absolute top-0 bottom-5 right-6 m-auto">
-            </div>
+           <FaCheckCircle size={19} className=" text-emerald-500 absolute top-0 bottom-5 right-5 m-auto"/>
+            :
+            <FaTimesCircle size={19} className=" text-rose-600 absolute top-0 bottom-5 right-5 m-auto"/>
            }
            </div>
           <div>
