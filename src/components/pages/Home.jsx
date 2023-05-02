@@ -43,7 +43,7 @@ function Home() {
   return (
     <div className="w-full h-screen max-sm:p-0 p-4 overflow-hidden max-sm:overflow-auto">
       <div className="w-full h-full p-10 grid xl:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-x-5">
-        <div className="w-full h-full">
+        <div className="w-full h-full max-sm:text-center">
           <TypeAnimation
             sequence={[
               "Get Fit,",
@@ -54,10 +54,10 @@ function Home() {
               5000,
             ]}
             speed={50}
-            className="xl: text-[80px] md:text-[80px] lg:text-[80px] max-sm:text-[65px] "
+            className="xl: text-[80px] md:text-[80px] lg:text-[80px] max-sm:text-[50px] "
             repeat={Infinity}
           />
-          <h1 className="xl: text-[85px] md:text-[80px] lg:text-[75px] max-sm:text-[65px]">And Free Sell!</h1>
+          <h1 className="xl: text-[85px] md:text-[80px] lg:text-[75px] max-sm:text-[50px]">And Free Sell!</h1>
           <p className="text-xl mt-4">
             A healthy lifestyle should be an important part of everyone's life,
             and fitness is an important aspect of maintaining this lifestyle.
