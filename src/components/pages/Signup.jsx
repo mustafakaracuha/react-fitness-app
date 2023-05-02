@@ -80,7 +80,7 @@ function Signup() {
           />
            {
            isValidEmail ? 
-           <FaCheckCircle size={19} className=" text-emerald-500 absolute top-0 bottom-5 right-5 m-auto"/>
+           <FaCheckCircle size={19} className=" text-emerald-600 absolute top-0 bottom-5 right-5 m-auto"/>
             :
             <FaTimesCircle size={19} className=" text-rose-600 absolute top-0 bottom-5 right-5 m-auto"/>
            }
