@@ -31,9 +31,8 @@
 https://new-year-note-app.vercel.app/
 
   
-## Screenshot
+### Screenshot
 
-![Uygulama Ekran Görüntüsü](https://github.com/mustafakaracuha/react-fitness-app-demo/blob/master/src/assets/images/screenshot/app.gif)
-
+<img align="center" width="900" width="900"  src="https://github.com/mustafakaracuha/react-fitness-app-demo/blob/main/src/assets/screenshot/app.gif" alt="muskaracuha" />
 
   
