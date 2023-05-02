@@ -106,7 +106,7 @@ function Home() {
             </button>
           </div>
         </div>
-        <div className="w-full h-full ml-3 md:hidden max-sm:hidden xl:block lg:block rounded-[50px] overflow-hidden shadow-xl shadow-gray-300">
+        <div className="w-full h-full ml-3 md:hidden max-sm:hidden sm:hidden xl:block lg:block rounded-[50px] overflow-hidden shadow-xl shadow-gray-300">
           <img
             className="w-full h-full  object-cover transition-all duration-500 hover:scale-105"
             src={right}
