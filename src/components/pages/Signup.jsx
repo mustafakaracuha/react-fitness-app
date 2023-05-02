@@ -15,6 +15,7 @@ import { createUser, googleLogin, twitterLogin, githubLogin } from "../../config
 
 function Signup() {
   const [email, setEmail] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(false);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,15 @@ function Signup() {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const validateInp = () => {return (email.length && password === confirmPassword && password.length && confirmPassword.length)};
+  const validateInp = () => {return (email.length && password === confirmPassword && isValidEmail && password.length && confirmPassword.length)};
+
+  const handleEmailChange = (event) => {
+    const emailValue = event.target.value;
+    setEmail(emailValue);
+
+    const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+    setIsValidEmail(emailRegex.test(emailValue));
+  }
 
   const handleCreateUser = async (e) => {
     createUser(setLoading,setErr,email,password,navigate)
@@ -62,14 +71,20 @@ function Signup() {
           <p className=" text-center text-[15px] 2xl:text-slate-500 xl:text-slate-500 md:text-slate-500 sm:text-slate-500 mb-7">
             Please enter your details.
           </p>
+          <div className="relative flex items-center justify-center">
           <input
             className="w-full h-14 pl-5 border border-gray-300 placeholder:text-gray-300 text-gray-500 rounded-full mb-5 bg-transparent outline-none"
             placeholder="Email"
-            onChange={(e) => {
-              setErr("");
-              setEmail(e.target.value);
-            }}
+            onChange={handleEmailChange}
           />
+           {
+           isValidEmail ? 
+           <div className="w-4 h-4 bg-emerald-500 rounded-xl flex items-center justify-center transition-all absolute top-0 bottom-5 right-6 m-auto">
+          </div>:
+            <div className="w-4 h-4 bg-rose-400 rounded-full flex items-center justify-center transition-all absolute top-0 bottom-5 right-6 m-auto">
+            </div>
+           }
+           </div>
           <div>
           <span className="relative">
           <input
