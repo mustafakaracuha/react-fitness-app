@@ -144,7 +144,7 @@ function Signup() {
   return (
     <div className="grid xl:grid-cols-3 md:grid-cols-1 max-sm:grid-cols-1">
       <div className="w-full h-screen flex items-center justify-center">
-        <div className="max-sm:p-8">
+        <div>
           <img className="w-16 m-auto mb-2" src={logo} alt="" />
           <h1 className=" text-center font-semibold text-[27px] mb-3">
             Register
