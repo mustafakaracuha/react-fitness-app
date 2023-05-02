@@ -241,6 +241,7 @@ function Signup() {
           src={video2}
           autoPlay
           loop
+          playsinline
           muted
         />
         <span className=" absolute bottom-2 right-4 text-white opacity-30 text-[15px]">
