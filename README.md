@@ -7,7 +7,7 @@
 - React Js
 - Tailwind CSS
 - React Icons
-- Firebase (Google, Twitter, Github Login, Create User and Login)
+- Firebase (Google, Twitter, Github Login, Register and Login)
 
   
 ## Installation 
