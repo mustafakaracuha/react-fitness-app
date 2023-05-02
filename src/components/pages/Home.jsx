@@ -41,9 +41,9 @@ function Home() {
   };
 
   return (
-    <div className="w-full h-screen max-sm:p-0 p-4 overflow-hidden max-sm:overflow-auto">
-      <div className="w-full h-full p-10 grid xl:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-x-5">
-        <div className="w-full h-full max-sm:text-center">
+    <div className="w-full h-screen max-sm:p-0 xl:p-4 lg:p-4 md:p-4 overflow-hidden max-sm:overflow-auto">
+      <div className="w-full h-full p-5 grid xl:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-x-5">
+        <div className="w-full h-full">
           <TypeAnimation
             sequence={[
               "Get Fit,",
@@ -77,9 +77,9 @@ function Home() {
             one place.
           </p>
           <div className="w-full grid xl:grid-cols-4 sm:grid-cols-2 gap-x-2 mt-10">
-            <button className="group/item col-span-2 border-2 border-gray-300 h-14 rounded-full transition-all duration-500 text-black hover:bg-black hover:text-white flex items-center max-sm:justify-center">
+            <button className="group/item col-span-2 border-2 border-gray-300 h-14 rounded-full transition-all duration-500 text-black hover:bg-black hover:text-white flex items-center">
               <Avatar src={user?.photoURL?.replace('"', "")} className="ml-2" />
-              <p className="w-64 ml-3 text-md capitalize truncate">
+              <p className="ml-3 text-md capitalize truncate">
                 Welcome Back {user?.displayName ? user?.displayName : user?.email }
               </p>
               <CgArrowRight 
