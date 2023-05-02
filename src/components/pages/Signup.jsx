@@ -247,7 +247,7 @@ function Signup() {
       </div>
       <div className="2xl:w-full xl:w-full lg:w-full 2xl:block xl:block max-md:hidden max-sm:hidden col-span-2 h-screen bg-gradient-to-r from-fuchsia-600 to-purple-600 rounded-l-[90px] overflow-hidden relative">
         <video
-          className="w-full h-full object-cover opacity-50 max-sm:hidden"
+          className="max-sm:hidden xl:w-full xl:h-full lg:w-full lg:h-full object-cover opacity-50"
           src={video1}
           autoPlay
           loop
