@@ -33,7 +33,7 @@ https://new-year-note-app.vercel.app/
   
 ## Screenshot
 
-![Uygulama Ekran Görüntüsü](https://github.com/mustafakaracuha/new-year-note-app/blob/master/src/assets/images/screenshots/3.png)
+![Uygulama Ekran Görüntüsü](https://github.com/mustafakaracuha/react-fitness-app-demo/blob/master/src/assets/images/screenshot/app.gif)
 
 
   
